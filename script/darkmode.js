@@ -5,10 +5,14 @@ const root = document.querySelector(":root");
 
 toggle.addEventListener("click", function(){
     if (toggle.checked) {
-        root.style.setProperty('--light', '#151515');
-        root.style.setProperty('--dark', '#d8dbe0');
+        // lightmode
+        root.style.setProperty('--light', '#1a1a1a');
+        root.style.setProperty('--dark', '#fff');
+        root.style.setProperty('--dark-bg', '#f0f0f0');
     } else {
-        root.style.setProperty('--light', '#d8dbe0');
-        root.style.setProperty('--dark', '#151515');
+        // darkmode
+        root.style.setProperty('--light', '#fff');
+        root.style.setProperty('--dark', '#1a1a1a');
+        root.style.setProperty('--dark-bg', '#212121');
     }
 });
