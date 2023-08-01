@@ -22,6 +22,10 @@ function toggleDarkmode() {
   }
 }
 
+function addTransition() {
+    root.style.setProperty("--transition", "0.2s ease-out");
+}
+
 window.addEventListener("DOMContentLoaded", () => {
   toggle.checked = localStorage.toggle === "true";
   document.addEventListener(
@@ -31,6 +35,8 @@ window.addEventListener("DOMContentLoaded", () => {
     },
     false
   );
+  root.style.setProperty("--transition", "0s");
   toggleDarkmode();
   toggle.addEventListener("click", toggleDarkmode);
+  setTimeout(addTransition, 100);
 });
