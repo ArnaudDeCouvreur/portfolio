@@ -138,6 +138,7 @@ table {
   --light: #ffffff;
   --dark: #1a1a1a;
   --dark-bg: #212121;
+  --dark-nav: #2a2a2a;
   --accent: #242e77;
   --transition: 0.2s ease-out;
 }
@@ -274,7 +275,7 @@ input:checked ~ .slider::before {
   bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #2a2a2a;
+  background-color: var(--dark-nav);
   padding: 0.4rem;
   border-radius: 500px;
   display: flex;
@@ -289,7 +290,7 @@ input:checked ~ .slider::before {
   color: white !important;
 }
 .nav__item--active {
-  background-color: #242e77;
+  background-color: var(--accent);
 }
 .nav__item:hover {
   background-color: #333131;
@@ -322,11 +323,11 @@ input:checked ~ .slider::before {
   display: none;
 }
 .hero__blinker {
-  margin-left: 0.5rem;
+  margin-left: -0.3rem;
   display: inline-block;
   width: 0.2rem;
   height: clamp(2rem, 5vw, 3.8rem);
-  background-color: #242e77;
+  background-color: var(--accent);
   animation: infinite blinking 0.5s;
 }
 .hero__description {
@@ -389,6 +390,9 @@ input:checked ~ .slider::before {
   }
   .hero__title--mobile {
     display: unset;
+  }
+  .hero__title--about {
+    max-width: min(70vw, 55rem);
   }
   .hero__description {
     grid-column: 2/3;
@@ -465,7 +469,7 @@ input:checked ~ .slider::before {
 .projects__tag {
   font-weight: 400;
   font-size: 0.9rem;
-  border: var(--accent) 1px solid;
+  border: var(--accent) 2px solid;
   border-radius: 500px;
   padding: 0.4rem 0.6rem;
 }

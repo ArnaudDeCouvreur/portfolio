@@ -3,8 +3,7 @@
 const title = document.querySelector(".js-title");
 
 var i = 0;
-var txt =
-  `Front-end and Wordpress developer`;
+var txt = title.dataset.content;
 var speed = 60;
 
 function typeWriter() {
