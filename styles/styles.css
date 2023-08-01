@@ -342,6 +342,17 @@ input:checked ~ .slider::before {
 .hero__button i {
   padding-left: 0.3rem;
 }
+.hero__socials {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.hero__socials--desktop {
+  display: none;
+}
+.hero__socials--mobile {
+  margin-top: 2rem;
+}
 
 @media screen and (min-width: 767px) {
   .hero__content {
@@ -367,7 +378,7 @@ input:checked ~ .slider::before {
     padding-bottom: 3rem;
     gap: 1rem;
   }
-  .hero__button {
+  .hero__button, .hero__socials {
     grid-column: 1/2;
     grid-row: 2/3;
     height: -moz-fit-content;
@@ -376,14 +387,19 @@ input:checked ~ .slider::before {
     width: fit-content;
     place-self: center;
   }
-  .hero__button--desktop {
+  .hero__button--desktop, .hero__socials--desktop {
     display: block;
   }
-  .hero__button--mobile {
+  .hero__button--mobile, .hero__socials--mobile {
     display: none;
   }
-  .hero__button:hover {
+  .hero__button:hover, .hero__socials:hover {
     cursor: pointer;
+  }
+  .hero__socials--desktop {
+    width: 100%;
+    display: flex;
+    padding-bottom: 2rem;
   }
 }
 /* PROJECTS */
