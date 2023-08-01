@@ -395,6 +395,9 @@ input:checked ~ .slider::before {
       display: flex;
       align-items: flex-end;
       padding: 0;
+      & > div {
+        min-height: 10rem;
+      }
       &--mobile {
         display: unset;
       }
