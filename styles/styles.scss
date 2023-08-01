@@ -211,8 +211,6 @@ svg {
   }
 }
 
-
-
 .container {
   max-width: min(100% - 2rem, 70rem);
   margin: 0 auto;
@@ -317,7 +315,8 @@ input:checked ~ .slider::before {
     height: 83vh;
     display: grid;
   }
-  &__link {
+  &__link,
+  &__button--mobile {
     margin-top: 1rem;
   }
   &__title {
@@ -332,12 +331,29 @@ input:checked ~ .slider::before {
   &__svg {
     width: 100%;
   }
+  &__button {
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 500px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0.8rem 1.2rem;
+    margin-bottom: 3rem;
+    &--desktop {
+      display: none;
+    }
+    & i {
+      padding-left: 0.3rem;
+    }
+  }
 }
 
 @media screen and (min-width: 767px) {
   .hero {
     &__content {
       height: calc(100vh - 75px);
+      min-height: 35rem;
       grid-template-rows: 1fr 1.5fr;
       grid-template-columns: repeat(2, 1fr);
     }
@@ -357,6 +373,22 @@ input:checked ~ .slider::before {
       justify-content: center;
       padding-bottom: 3rem;
       gap: 1rem;
+    }
+    &__button {
+      grid-column: 1/2;
+      grid-row: 2/3;
+      height: fit-content;
+      width: fit-content;
+      place-self: center;
+      &--desktop {
+        display: block;
+      }
+      &--mobile {
+        display: none;
+      }
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 }
@@ -424,7 +456,6 @@ input:checked ~ .slider::before {
         width: 60%;
       }
     }
-
   }
 }
 
@@ -511,5 +542,44 @@ input:checked ~ .slider::before {
     &__socials {
       width: 35%;
     }
+  }
+}
+
+/* ABOUT */
+
+.about {
+  padding-bottom: 10rem;
+  position: relative;
+  &__title {
+    margin-bottom: 2.5rem;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  &__svg {
+    width: 100%;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media screen and (min-width:767px) {
+  .about {
+    &__info {
+      flex-direction: row;
+      align-items: center;
+      & > * {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:1024px) {
+  .about {
+    padding-bottom: 15rem;
   }
 }
