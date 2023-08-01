@@ -321,9 +321,19 @@ input:checked ~ .slider::before {
   }
   &__title {
     padding: 4rem 0 0 0;
+    position: relative;
     &--mobile {
       display: none;
     }
+  }
+  &__blinker {
+    margin-left: 0.5rem;
+    display: inline-block;
+    width: 0.2rem;
+    // height: 3.5rem;
+    height: clamp(2rem, 5vw, 3.8rem);
+    background-color: #242e77;
+    animation: infinite blinking 0.5s;
   }
   &__description {
     padding-bottom: 6rem;
@@ -357,6 +367,18 @@ input:checked ~ .slider::before {
     &--mobile {
       margin-top: 2rem;
     }
+  }
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
