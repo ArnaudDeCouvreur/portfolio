@@ -293,6 +293,9 @@ input:checked ~ .slider::before {
     &:hover {
       background-color: #333131;
     }
+    &--active:hover {
+      background-color: var(--accent);
+    }
   }
 }
 
@@ -361,11 +364,15 @@ input:checked ~ .slider::before {
     font-weight: 600;
     padding: 0.8rem 1.2rem;
     margin-bottom: 3rem;
+    transition: var(--transition);
     &--desktop {
       display: none;
     }
     & i {
       padding-left: 0.3rem;
+    }
+    &:hover {
+      opacity: 0.8;
     }
   }
   &__socials {

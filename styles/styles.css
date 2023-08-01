@@ -296,6 +296,9 @@ input:checked ~ .slider::before {
 .nav__item:hover {
   background-color: #333131;
 }
+.nav__item--active:hover {
+  background-color: var(--accent);
+}
 
 /* HEADER */
 .header__content {
@@ -356,12 +359,16 @@ input:checked ~ .slider::before {
   font-weight: 600;
   padding: 0.8rem 1.2rem;
   margin-bottom: 3rem;
+  transition: var(--transition);
 }
 .hero__button--desktop {
   display: none;
 }
 .hero__button i {
   padding-left: 0.3rem;
+}
+.hero__button:hover {
+  opacity: 0.8;
 }
 .hero__socials {
   display: flex;
