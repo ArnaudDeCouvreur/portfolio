@@ -362,9 +362,11 @@ input:checked ~ .slider::before {
     border-radius: 500px;
     text-transform: uppercase;
     font-weight: 600;
-    padding: 0.8rem 1.2rem;
+    padding: 0.9rem 1.3rem;
     margin-bottom: 3rem;
     transition: var(--transition);
+    font-size: 0.9rem;
+    font-weight: 700;
     &--desktop {
       display: none;
     }
@@ -373,6 +375,9 @@ input:checked ~ .slider::before {
     }
     &:hover {
       opacity: 0.8;
+    }
+    &:hover i {
+      transform: none;
     }
   }
   &__socials {
